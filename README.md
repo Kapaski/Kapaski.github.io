@@ -5,4 +5,4 @@ blog host
 
 I suddently decided to try heroku for post hosting.
 
-Check the (url)[] later!
+Check the [url]() later!
