@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: octopress | Kapaski's Blog]]></title>
+  <title><![CDATA[Category: Octopress | Kapaski's Blog]]></title>
   <link href="http://Kapaski.github.io/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://Kapaski.github.io/"/>
-  <updated>2014-04-14T21:31:47+10:00</updated>
+  <updated>2014-04-14T21:33:14+10:00</updated>
   <id>http://Kapaski.github.io/</id>
   <author>
     <name><![CDATA[Kapaski]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Octopress customisation]]></title>
+    <title type="html"><![CDATA[Octopress Customisation]]></title>
     <link href="http://Kapaski.github.io/blog/2014/04/14/octopress-customisation/"/>
     <updated>2014-04-14T20:43:41+10:00</updated>
     <id>http://Kapaski.github.io/blog/2014/04/14/octopress-customisation</id>
