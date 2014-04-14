@@ -3,9 +3,9 @@
 # ----------------------- #
 
 url: http://Kapaski.github.io
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+title: Kapaski's Blog
+subtitle: not that russian anti-virus software
+author: Kapaski
 simple_search: https://www.google.com/search
 description:
 
@@ -101,3 +101,6 @@ facebook_like: false
 
 #jiathis
 jiathis: true
+
+# UY Comments
+uyan_comment: true
