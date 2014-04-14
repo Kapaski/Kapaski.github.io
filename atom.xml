@@ -4,7 +4,7 @@
   <title><![CDATA[Kapaski's Blog]]></title>
   <link href="http://Kapaski.github.io/atom.xml" rel="self"/>
   <link href="http://Kapaski.github.io/"/>
-  <updated>2014-04-14T20:44:59+10:00</updated>
+  <updated>2014-04-14T21:06:18+10:00</updated>
   <id>http://Kapaski.github.io/</id>
   <author>
     <name><![CDATA[Kapaski]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Octopress Customisation]]></title>
+    <title type="html"><![CDATA[Octopress customisation]]></title>
     <link href="http://Kapaski.github.io/blog/2014/04/14/octopress-customisation/"/>
     <updated>2014-04-14T20:43:41+10:00</updated>
     <id>http://Kapaski.github.io/blog/2014/04/14/octopress-customisation</id>
@@ -23,7 +23,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Second Post]]></title>
+    <title type="html"><![CDATA[second post]]></title>
     <link href="http://Kapaski.github.io/blog/2014/04/14/second-post/"/>
     <updated>2014-04-14T13:13:53+10:00</updated>
     <id>http://Kapaski.github.io/blog/2014/04/14/second-post</id>
