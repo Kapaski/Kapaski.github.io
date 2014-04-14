@@ -13,9 +13,9 @@ Still trying to figure out how to deploy the samething on to
 
 -----
 
-Some `markdown` things here:
-> this is level1
->> the second line
+Will write some `markdown` things here:
+> this is a blog
+>> a leet blog
 
 ```ruby
 #this is code
