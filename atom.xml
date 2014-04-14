@@ -4,7 +4,7 @@
   <title><![CDATA[Kapaski's Blog]]></title>
   <link href="http://Kapaski.github.io/atom.xml" rel="self"/>
   <link href="http://Kapaski.github.io/"/>
-  <updated>2014-04-14T15:18:24+10:00</updated>
+  <updated>2014-04-14T15:35:33+10:00</updated>
   <id>http://Kapaski.github.io/</id>
   <author>
     <name><![CDATA[Kapaski]]></name>
@@ -19,6 +19,8 @@
     <updated>2014-04-14T13:13:53+10:00</updated>
     <id>http://Kapaski.github.io/blog/2014/04/14/second-post</id>
     <content type="html"><![CDATA[<p>This is still a test post that showing the <code>share</code> and <code>comment</code> added lately</p>
+
+<p>友言读取速度比较慢的说 如果回复的人不多以后不如改成disqus了</p>
 ]]></content>
   </entry>
   
