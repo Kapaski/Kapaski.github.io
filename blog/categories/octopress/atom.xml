@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Octopress | Kapaski's Blog]]></title>
+  <link href="http://Kapaski.github.io/blog/categories/octopress/atom.xml" rel="self"/>
+  <link href="http://Kapaski.github.io/"/>
+  <updated>2014-04-14T20:44:59+10:00</updated>
+  <id>http://Kapaski.github.io/</id>
+  <author>
+    <name><![CDATA[Kapaski]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Octopress Customisation]]></title>
+    <link href="http://Kapaski.github.io/blog/2014/04/14/octopress-customisation/"/>
+    <updated>2014-04-14T20:43:41+10:00</updated>
+    <id>http://Kapaski.github.io/blog/2014/04/14/octopress-customisation</id>
+    <content type="html"><![CDATA[<p>Added a category list to this blog. Essentially, a sidebar, a plugin and a flag in site config.</p>
+]]></content>
+  </entry>
+  
+</feed>
