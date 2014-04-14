@@ -4,7 +4,7 @@
   <title><![CDATA[My Octopress Blog]]></title>
   <link href="http://Kapaski.github.io/atom.xml" rel="self"/>
   <link href="http://Kapaski.github.io/"/>
-  <updated>2014-04-14T09:38:36+10:00</updated>
+  <updated>2014-04-14T12:54:06+10:00</updated>
   <id>http://Kapaski.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
@@ -12,5 +12,32 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[First Post!]]></title>
+    <link href="http://Kapaski.github.io/blog/2014/04/14/first-post/"/>
+    <updated>2014-04-14T12:38:46+10:00</updated>
+    <id>http://Kapaski.github.io/blog/2014/04/14/first-post</id>
+    <content type="html"><![CDATA[<h1>First Post!</h1>
+
+<p>Still trying to figure out how to deploy the samething on to
+<code>heroku</code></p>
+
+<hr />
+
+<p>Some <code>markdown</code> things here:</p>
+
+<blockquote><p>this is level1</p>
+
+<blockquote><p>the second line</p></blockquote></blockquote>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='ruby'><span class='line'><span class="c1">#this is code</span>
+</span><span class='line'><span class="nb">puts</span> <span class="s1">&#39;i am actually a code block&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
 </feed>
