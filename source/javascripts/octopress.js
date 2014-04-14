@@ -93,8 +93,11 @@ function flashVideoFallback(){
 
 function wrapFlashVideos() {
   $('object').each(function(i, object) {
-    if( $(object).find('param[name=movie]').length ){
-      $(object).wrap('<div class="flash-video">')
+    obj = $(object)
+    if(obj.attr('id') != "JIATHISSWF") {
+      if( $(object).find('param[name=movie]').length ){
+        $(object).wrap('<div class="flash-video">')
+      }
     }
   });
   $('iframe[src*=vimeo],iframe[src*=youtube]').wrap('<div class="flash-video">')
