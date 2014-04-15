@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Chef | Kapaski's Blog]]></title>
   <link href="http://Kapaski.github.io/blog/categories/chef/atom.xml" rel="self"/>
   <link href="http://Kapaski.github.io/"/>
-  <updated>2014-04-15T15:12:50+10:00</updated>
+  <updated>2014-04-15T18:48:26+10:00</updated>
   <id>http://Kapaski.github.io/</id>
   <author>
     <name><![CDATA[Kapaski]]></name>
@@ -19,8 +19,6 @@
     <updated>2014-04-15T11:22:30+10:00</updated>
     <id>http://Kapaski.github.io/blog/2014/04/15/chef-and-his-cookbooks</id>
     <content type="html"><![CDATA[<blockquote><p>Chef is fun when it has all carefully written cookbooks and a functioning &lsquo;knife&rsquo;.</p></blockquote>
-
-<p>ps 发现用<a href="atom.io">Atom</a>来写blog真是方便,git无缝集成.</p>
 ]]></content>
   </entry>
   
