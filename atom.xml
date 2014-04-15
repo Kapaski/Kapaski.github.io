@@ -4,7 +4,7 @@
   <title><![CDATA[Kapaski's Blog]]></title>
   <link href="http://Kapaski.github.io/atom.xml" rel="self"/>
   <link href="http://Kapaski.github.io/"/>
-  <updated>2014-04-14T22:06:11+10:00</updated>
+  <updated>2014-04-15T11:24:12+10:00</updated>
   <id>http://Kapaski.github.io/</id>
   <author>
     <name><![CDATA[Kapaski]]></name>
@@ -14,21 +14,11 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Git Playground]]></title>
-    <link href="http://Kapaski.github.io/blog/2014/04/14/git-playground/"/>
-    <updated>2014-04-14T21:57:39+10:00</updated>
-    <id>http://Kapaski.github.io/blog/2014/04/14/git-playground</id>
-    <content type="html"><![CDATA[<p>Git is not fun in command line, especially when involving multiple branches.</p>
-
-<blockquote><p><code>SourceTree</code> is an excellent GUI for git. Check it <a href="http://www.sourcetreeapp.com/">here</a></p></blockquote>
-
-<p>Here is a list of sources about learning git:</p>
-
-<ul>
-<li><a href="http://nvie.com/posts/a-successful-git-branching-model/">a successful git branching model</a></li>
-<li><a href="http://pcottle.github.io/learnGitBranching/">learn git braching</a></li>
-</ul>
-
+    <title type="html"><![CDATA[Chef and His Cookbooks]]></title>
+    <link href="http://Kapaski.github.io/blog/2014/04/15/chef-and-his-cookbooks/"/>
+    <updated>2014-04-15T11:22:30+10:00</updated>
+    <id>http://Kapaski.github.io/blog/2014/04/15/chef-and-his-cookbooks</id>
+    <content type="html"><![CDATA[<blockquote><p>Chef is fun when it has all carefully written cookbooks and a functioning &lsquo;knife&rsquo;.</p></blockquote>
 ]]></content>
   </entry>
   
@@ -47,6 +37,8 @@
     <updated>2014-04-14T13:13:53+10:00</updated>
     <id>http://Kapaski.github.io/blog/2014/04/14/second-post</id>
     <content type="html"><![CDATA[<p>This is still a test post that showing the <code>share</code> and <code>comment</code> added lately</p>
+
+<p>友言读取速度比较慢的说 如果回复的人不多以后不如改成disqus了</p>
 ]]></content>
   </entry>
   

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Ruby | Kapaski's Blog]]></title>
+  <link href="http://Kapaski.github.io/blog/categories/ruby/atom.xml" rel="self"/>
+  <link href="http://Kapaski.github.io/"/>
+  <updated>2014-04-15T11:24:12+10:00</updated>
+  <id>http://Kapaski.github.io/</id>
+  <author>
+    <name><![CDATA[Kapaski]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Chef and His Cookbooks]]></title>
+    <link href="http://Kapaski.github.io/blog/2014/04/15/chef-and-his-cookbooks/"/>
+    <updated>2014-04-15T11:22:30+10:00</updated>
+    <id>http://Kapaski.github.io/blog/2014/04/15/chef-and-his-cookbooks</id>
+    <content type="html"><![CDATA[<blockquote><p>Chef is fun when it has all carefully written cookbooks and a functioning &lsquo;knife&rsquo;.</p></blockquote>
+]]></content>
+  </entry>
+  
+</feed>
