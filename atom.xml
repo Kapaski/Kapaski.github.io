@@ -4,7 +4,7 @@
   <title><![CDATA[Kapaski's Blog]]></title>
   <link href="http://Kapaski.github.io/atom.xml" rel="self"/>
   <link href="http://Kapaski.github.io/"/>
-  <updated>2014-04-15T15:12:50+10:00</updated>
+  <updated>2014-04-17T14:40:20+10:00</updated>
   <id>http://Kapaski.github.io/</id>
   <author>
     <name><![CDATA[Kapaski]]></name>
@@ -14,6 +14,20 @@
 
   
   <entry>
+    <title type="html"><![CDATA[The Secret Life of Walter Mitty]]></title>
+    <link href="http://Kapaski.github.io/blog/2014/04/16/the-secret-life-of-walter-mitty/"/>
+    <updated>2014-04-16T22:05:46+10:00</updated>
+    <id>http://Kapaski.github.io/blog/2014/04/16/the-secret-life-of-walter-mitty</id>
+    <content type="html"><![CDATA[<p>The Secret Life of Walter Mitty. 豆瓣<a href="http://movie.douban.com/subject/2133323/">评分8.1的影片</a></p>
+
+<p><img src="http://img3.douban.com/view/movie_poster_cover/spst/public/p2160195181.jpg" alt="check this image" /></p>
+
+<p>爱做白日梦的主角，屌丝，女神。 专注的做一件事，逆袭什么的总会发生的。
+总之是一种说不出的共鸣，很久没看到类似的电影了。</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[Chef and His Cookbooks]]></title>
     <link href="http://Kapaski.github.io/blog/2014/04/15/chef-and-his-cookbooks/"/>
     <updated>2014-04-15T11:22:30+10:00</updated>
@@ -21,6 +35,25 @@
     <content type="html"><![CDATA[<blockquote><p>Chef is fun when it has all carefully written cookbooks and a functioning &lsquo;knife&rsquo;.</p></blockquote>
 
 <p>ps 发现用<a href="atom.io">Atom</a>来写blog真是方便,git无缝集成.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Git Playground]]></title>
+    <link href="http://Kapaski.github.io/blog/2014/04/14/git-playground/"/>
+    <updated>2014-04-14T21:57:39+10:00</updated>
+    <id>http://Kapaski.github.io/blog/2014/04/14/git-playground</id>
+    <content type="html"><![CDATA[<p>Git is not fun in command line, especially when involving multiple branches.</p>
+
+<blockquote><p><code>SourceTree</code> is an excellent GUI for git. Check it <a href="http://www.sourcetreeapp.com/">here</a></p></blockquote>
+
+<p>Here is a list of sources about learning git:</p>
+
+<ul>
+<li><a href="http://nvie.com/posts/a-successful-git-branching-model/">a successful git branching model</a></li>
+<li><a href="http://pcottle.github.io/learnGitBranching/">learn git braching</a></li>
+</ul>
+
 ]]></content>
   </entry>
   
