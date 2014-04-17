@@ -4,7 +4,11 @@
   <title><![CDATA[Kapaski's Blog]]></title>
   <link href="http://Kapaski.github.io/atom.xml" rel="self"/>
   <link href="http://Kapaski.github.io/"/>
+<<<<<<< HEAD
   <updated>2014-04-17T14:42:30+10:00</updated>
+=======
+  <updated>2014-04-16T22:06:41+10:00</updated>
+>>>>>>> a234c9dc819931360fa61dc2418061c387269e4f
   <id>http://Kapaski.github.io/</id>
   <author>
     <name><![CDATA[Kapaski]]></name>
@@ -33,8 +37,25 @@
     <updated>2014-04-15T11:22:30+10:00</updated>
     <id>http://Kapaski.github.io/blog/2014/04/15/chef-and-his-cookbooks</id>
     <content type="html"><![CDATA[<blockquote><p>Chef is fun when it has all carefully written cookbooks and a functioning &lsquo;knife&rsquo;.</p></blockquote>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Git Playground]]></title>
+    <link href="http://Kapaski.github.io/blog/2014/04/14/git-playground/"/>
+    <updated>2014-04-14T21:57:39+10:00</updated>
+    <id>http://Kapaski.github.io/blog/2014/04/14/git-playground</id>
+    <content type="html"><![CDATA[<p>Git is not fun in command line, especially when involving multiple branches.</p>
 
-<p>ps 发现用<a href="atom.io">Atom</a>来写blog真是方便,git无缝集成.</p>
+<blockquote><p><code>SourceTree</code> is an excellent GUI for git. Check it <a href="http://www.sourcetreeapp.com/">here</a></p></blockquote>
+
+<p>Here is a list of sources about learning git:</p>
+
+<ul>
+<li><a href="http://nvie.com/posts/a-successful-git-branching-model/">a successful git branching model</a></li>
+<li><a href="http://pcottle.github.io/learnGitBranching/">learn git braching</a></li>
+</ul>
+
 ]]></content>
   </entry>
   
