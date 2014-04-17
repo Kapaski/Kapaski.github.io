@@ -7,3 +7,5 @@ categories: [Chef, Ruby]
 ---
 
 > Chef is fun when it has all carefully written cookbooks and a functioning 'knife'.
+
+ps 发现用[Atom](atom.io)来写blog真是方便,git无缝集成.
