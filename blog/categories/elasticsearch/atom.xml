@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: ElasticSearch | Kapaski's Blog]]></title>
+  <link href="http://Kapaski.github.io/blog/categories/elasticsearch/atom.xml" rel="self"/>
+  <link href="http://Kapaski.github.io/"/>
+  <updated>2014-05-23T10:42:44+10:00</updated>
+  <id>http://Kapaski.github.io/</id>
+  <author>
+    <name><![CDATA[Kapaski]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Trick With Kibanan Query String]]></title>
+    <link href="http://Kapaski.github.io/blog/2014/05/23/trick-with-kibanan-query-string/"/>
+    <updated>2014-05-23T10:41:02+10:00</updated>
+    <id>http://Kapaski.github.io/blog/2014/05/23/trick-with-kibanan-query-string</id>
+    <content type="html"><![CDATA[<p>Since we already did this couple of times, maybe put it in a post for others convenience:</p>
+
+<p><a href="https://github.com/elasticsearch/kibana/issues/168">Github Issue Ref</a></p>
+
+<p>This will allow the user can add a ?query=foo to search with keywords &lsquo;foo&rsquo;</p>
+
+<p><img src="https://camo.githubusercontent.com/058cd5d8173b179cd88f942118e06018909aa54b/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f313235303338372f313038323737362f62643839646664382d313538642d313165332d383165312d3635346161636533633361352e706e67" alt="img" /></p>
+
+<p>You must put above string in one query field and save the dashboard to make it happen, however the defect will be next time when you try to save the dashboard and forget put the samething in the query field, it will be lost.</p>
+
+<p>Quick walkaround will be &mdash;  <code>pin</code>  it then save, and make your panels listen to this pinned query dedicatedly, and then you will have a dynamic panel showing search result based on http query strings!</p>
+]]></content>
+  </entry>
+  
+</feed>
