@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Logstash | Kapaski's Blog]]></title>
+  <link href="http://Kapaski.github.io/blog/categories/logstash/atom.xml" rel="self"/>
+  <link href="http://Kapaski.github.io/"/>
+  <updated>2014-07-24T17:18:16+10:00</updated>
+  <id>http://Kapaski.github.io/</id>
+  <author>
+    <name><![CDATA[Kapaski]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Logstash to Parse Json With Json Arrays in Values]]></title>
+    <link href="http://Kapaski.github.io/blog/2014/07/24/logstash-to-parse-json-with-json-arrays-in-values/"/>
+    <updated>2014-07-24T17:15:06+10:00</updated>
+    <id>http://Kapaski.github.io/blog/2014/07/24/logstash-to-parse-json-with-json-arrays-in-values</id>
+    <content type="html"><![CDATA[<p>Logstash has a known issue that it doesn&rsquo;t convert json array into hash but just return the array.</p>
+
+<p>Example</p>
+
+<p>{a:[11,22,33]} gives you <code>a = [11,22,33]</code> &lt;&lt; this is correct
+{a:[{foo:11}, {foo:22}]} gives you <code>a = [{foo:11}, {foo:22}]</code> &lt;&lt; this is not flat enough, especially some queries are requiring to use keys like <code>a.foo = 11</code></p>
+
+<p>By all means, there a couple of pull request to the Logstash github :
+<a href="https://github.com/elasticsearch/logstash/pull/1185">https://github.com/elasticsearch/logstash/pull/1185</a>
+but neither of them has been merged. There are still below comments in <a href="https://github.com/elasticsearch/logstash/blob/master/lib/logstash/filters/json.rb">source code</a> today:</p>
+
+<pre><code>  # TODO(sissel): Note, this will not successfully handle json lists
+  # like your text is '[ 1,2,3 ]' json parser gives you an array (correctly)
+  # which won't merge into a hash. If someone needs this, we can fix it
+  # later.
+</code></pre>
+
+<p>So standing in middle of nowhere, with what&rsquo;s on hand, the <code>Ruby</code> filter seems the last resort, and below code works, so no need to use the out of box &lsquo;json&rsquo; filter anymore</p>
+
+<pre><code>  input {
+    stdin{}
+  }
+
+  filter {
+    grok {
+      match =&gt; ["message","(?&lt;json_raw&gt;.*)"]
+    }
+
+    ruby {
+      init =&gt; "
+        def parse_json obj, pname=nil, event
+
+          obj = JSON.parse(obj) unless obj.is_a? Hash
+          obj = obj.to_hash unless obj.is_a? Hash
+
+          obj.each {|k,v|
+            p = pname.nil?? k : pname
+            if v.is_a? Array
+              v.each_with_index {|oo,ii|
+                p = [p,k].join('.')
+                parse_json_array(oo,ii,p,event)
+              }
+            elsif v.is_a? Hash
+              parse_json(v,p,event)
+            else
+              p = pname.nil?? k : [p, k].join('.')
+              event[p] = v
+            end
+          }
+
+        end
+
+        def parse_json_array obj, i,pname, event
+
+          obj = JSON.parse(obj) unless obj.is_a? Hash
+          pname_ = pname
+          if obj.is_a? Hash
+            obj.each {|k,v|
+
+              p=[pname_,i,k].join('.')
+              if v.is_a? Array
+                v.each_with_index {|oo,ii|
+                  parse_json_array(oo,ii,p,event)
+                }
+              elsif v.is_a? Hash
+                parse_json(v,p, event)
+              else
+                event[p] = v
+              end
+            }
+          else
+            n = [pname_, i].join('.')
+            event[n] = obj
+          end
+        end
+      "
+      code =&gt; "parse_json(event['json_raw'],nil,event) if event['json_raw'].include? ':'"
+        # "
+        # begin
+        #   parse_json(event['message'],event) unless event['message'].nil?
+        # rescue Exception =&gt;e
+        #   event.tag('_notparsable')
+        # end"
+
+    }
+
+
+  }
+
+  output {
+    stdout{codec =&gt; rubydebug}
+  }
+</code></pre>
+
+<p>Test json structure</p>
+
+<pre><code>{"id":123, "members":[{"i":1, "arr":[{"ii":11},{"ii":22}]},{"i":2}], "im_json":{"id":234, "members":[{"i":3},{"i":4}]}}
+</code></pre>
+
+<p>and this is whats output</p>
+
+<pre><code>      {
+      "message" =&gt; "{\"id\":123, \"members\":[{\"i\":1, \"arr\":[{\"ii\":11},{\"ii\":22}]},{\"i\":2}], \"im_json\":{\"id\":234, \"members\":[{\"i\":3},{\"i\":4}]}}",
+      "@version" =&gt; "1",
+      "@timestamp" =&gt; "2014-07-24T06:22:23.066Z",
+      "host" =&gt; "Leis-MacBook-Pro.local",
+      "json_raw" =&gt; "{\"id\":123, \"members\":[{\"i\":1, \"arr\":[{\"ii\":11},{\"ii\":22}]},{\"i\":2}], \"im_json\":{\"id\":234, \"members\":[{\"i\":3},{\"i\":4}]}}",
+      "id" =&gt; 123,
+      "members.members.0.i" =&gt; 1,
+      "members.members.0.arr.0.ii" =&gt; 11,
+      "members.members.0.arr.1.ii" =&gt; 22,
+      "members.members.members.1.i" =&gt; 2,
+      "im_json.id" =&gt; 234,
+      "im_json.members.0.i" =&gt; 3,
+      "im_json.members.members.1.i" =&gt; 4
+      }
+</code></pre>
+]]></content>
+  </entry>
+  
+</feed>
