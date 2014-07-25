@@ -48,13 +48,13 @@ So standing in middle of nowhere, with what's on hand, the `Ruby` filter seems t
                 p = pname.nil?? k : pname
                 if v.is_a? Array
                   v.each_with_index {|oo,ii|
-                    p = [p,k].join('.')
+
                     parse_json_array(oo,ii,p,event)
                   }
                 elsif v.is_a? Hash
                   parse_json(v,p,event)
                 else
-                  p = pname.nil?? k : [p, k].join('.')
+
                   event[p] = v
                 end
               }
@@ -85,14 +85,7 @@ So standing in middle of nowhere, with what's on hand, the `Ruby` filter seems t
               end
             end
           "
-          code => "parse_json(event['json_raw'],nil,event) if event['json_raw'].include? ':'"
-            # "
-            # begin
-            #   parse_json(event['message'],event) unless event['message'].nil?
-            # rescue Exception =>e
-            #   event.tag('_notparsable')
-            # end"
-
+          code => "parse_json(event['json_raw'].to_s,nil,event) if event['json_raw'].to_s.include? ':'"
         }
 
 
@@ -115,17 +108,17 @@ Test json structure
 and this is whats output
 
           {
-          "message" => "{\"id\":123, \"members\":[{\"i\":1, \"arr\":[{\"ii\":11},{\"ii\":22}]},{\"i\":2}], \"im_json\":{\"id\":234, \"members\":[{\"i\":3},{\"i\":4}]}}",
-          "@version" => "1",
-          "@timestamp" => "2014-07-24T06:22:23.066Z",
-          "host" => "Leis-MacBook-Pro.local",
-          "json_raw" => "{\"id\":123, \"members\":[{\"i\":1, \"arr\":[{\"ii\":11},{\"ii\":22}]},{\"i\":2}], \"im_json\":{\"id\":234, \"members\":[{\"i\":3},{\"i\":4}]}}",
-          "id" => 123,
-          "members.members.0.i" => 1,
-          "members.members.0.arr.0.ii" => 11,
-          "members.members.0.arr.1.ii" => 22,
-          "members.members.members.1.i" => 2,
-          "im_json.id" => 234,
-          "im_json.members.0.i" => 3,
-          "im_json.members.members.1.i" => 4
+               "message" => "{\"id\":123, \"members\":[{\"i\":1, \"arr\":[{\"ii\":11},{\"ii\":22}]},{\"i\":2}], \"im_json\":{\"id\":234, \"members\":[{\"i\":3},{\"i\":4}]}}",
+              "@version" => "1",
+            "@timestamp" => "2014-07-25T00:06:00.814Z",
+                  "host" => "Leis-MacBook-Pro.local",
+              "json_raw" => "{\"id\":123, \"members\":[{\"i\":1, \"arr\":[{\"ii\":11},{\"ii\":22}]},{\"i\":2}], \"im_json\":{\"id\":234, \"members\":[{\"i\":3},{\"i\":4}]}}",
+                    "id" => 123,
+           "members.0.i" => 1,
+    "members.0.arr.0.ii" => 11,
+    "members.0.arr.1.ii" => 22,
+           "members.1.i" => 2,
+               "im_json" => 234,
+           "im_json.0.i" => 3,
+           "im_json.1.i" => 4
           }
