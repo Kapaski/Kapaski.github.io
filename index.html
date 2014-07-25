@@ -139,7 +139,7 @@ but neither of them has been merged. There are still below comments in <a href="
             elsif v.is_a? Hash
               parse_json(v,p,event)
             else
-
+              p = pname.nil?? k : [pname,k].join('.')
               event[p] = v
             end
           }

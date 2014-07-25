@@ -4,7 +4,7 @@
   <title><![CDATA[Kapaski's Blog]]></title>
   <link href="http://Kapaski.github.io/atom.xml" rel="self"/>
   <link href="http://Kapaski.github.io/"/>
-  <updated>2014-07-25T10:16:09+10:00</updated>
+  <updated>2014-07-25T11:31:49+10:00</updated>
   <id>http://Kapaski.github.io/</id>
   <author>
     <name><![CDATA[Kapaski]]></name>
@@ -63,7 +63,7 @@ but neither of them has been merged. There are still below comments in <a href="
             elsif v.is_a? Hash
               parse_json(v,p,event)
             else
-
+              p = pname.nil?? k : [pname,k].join('.')
               event[p] = v
             end
           }
