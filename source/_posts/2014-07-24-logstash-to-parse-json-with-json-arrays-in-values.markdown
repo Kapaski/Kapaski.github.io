@@ -54,7 +54,7 @@ So standing in middle of nowhere, with what's on hand, the `Ruby` filter seems t
                 elsif v.is_a? Hash
                   parse_json(v,p,event)
                 else
-
+                  p = pname.nil?? k : [pname,k].join('.')
                   event[p] = v
                 end
               }
